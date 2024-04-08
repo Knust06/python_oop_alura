@@ -35,13 +35,32 @@ class Serie(Programa):
     def __str__(self):
         return f'{self._nome} - {self.ano} - {self.temporadas} temporadas - {self._likes} likes'
 
+class Playlist: #Não usamos herança, mas sim composição, pois a playlist não é um tipo de programa, ela tem uma lista de programas.
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self._programas = programas
+    def __getitem__(self, item):
+        return self._programas[item]
+    def __len__(self):
+        return len(self._programas)
+
 vingadores = Filme('vingadores - ultimato',2018, 160)
 chosen = Serie('the chosen', 2020, 3)
+tmep = Filme('Todo mundo em panico', 1999, 100)
+drive = Filme('Drive', 2011, 95)
+demolidor = Serie('Demolidor', 2016, 2)
+
+tmep.dar_like()
+tmep.dar_like()
+demolidor.dar_like()
+demolidor.dar_like()
+drive.dar_like()
 vingadores.dar_like()
 chosen.dar_like()
 chosen.dar_like()
 
-filmes_e_series = [vingadores, chosen]
+filmes_e_series = [vingadores, chosen, tmep, drive, demolidor]
+fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-for programa in filmes_e_series:
+for programa in fim_de_semana:
     print(programa) 
