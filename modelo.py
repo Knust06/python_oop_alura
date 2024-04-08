@@ -18,19 +18,16 @@ class Programa:
     @nome.setter
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
-class Filme(Programa):
+class Filme(Programa): #Herança seria criar uma classe que herda de outra que no caso a classe filme está herdando da classe Programa.
     def __init__(self, nome, ano, duracao):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.duracao = duracao
-        self._likes = 0
+
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.temporadas = temporadas
-        self._likes = 0 
 
 vingadores = Filme('vingadores - ultimato',2018, 160)
 
