@@ -1,5 +1,5 @@
 class Programa:
-    def __init__(self, nome, ano, duracao):
+    def __init__(self, nome, ano):
         self._nome = nome.title() #_Programa__nome
         self.ano = ano
         self._likes = 0
@@ -23,7 +23,6 @@ class Filme(Programa): #Herança seria criar uma classe que herda de outra que n
         super().__init__(nome, ano)
         self.duracao = duracao
 
-
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome, ano)
@@ -39,5 +38,11 @@ chosen.dar_like()
 
 chosen.dar_like()
 
-print(f"Nome: {vingadores.nome} - Ano: {vingadores.ano} - Duração: {vingadores.duracao} - Likes: {vingadores.likes}")
-print(f"Nome: {chosen.nome} - Ano: {chosen.ano} - Temporadas: {chosen.temporadas} - Likes: {chosen.likes}")
+print(f"{vingadores.nome} - {vingadores.ano} - {vingadores.duracao} - {vingadores.likes}")
+print(f"{chosen.nome} - {chosen.ano} - {chosen.temporadas} - {chosen.likes}")
+
+filmes_e_series = [vingadores, chosen]
+
+for programa in filmes_e_series:
+    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporadas
+    print(f"{programa.nome} - {detalhes} - {programa.likes}")
