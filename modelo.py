@@ -66,3 +66,9 @@ print(f'Tamanho da playlist: {len(fim_de_semana)}')
 
 for programa in fim_de_semana:
     print(programa) 
+
+
+#Abstract Base Classes - ABC - São classes que não podem ser instanciadas, são classes que servem para serem herdadas. E com isso podemos garantir que as classes filhas tenham os métodos que queremos que elas tenham.
+#MRO - Method Resolution Order - É a ordem que o python vai procurar os métodos que estamos chamando. O python vai procurar primeiro na classe que estamos instanciando, depois na classe mãe e assim por diante.
+#Good Head - Grandmother, Mother, Daughter - É uma forma de lembrar a ordem que o python vai procurar os métodos.
+#Mixin - É uma classe que não é a principal, mas sim uma classe que tem um comportamento específico que pode ser usado em outras classes. Exemplo: Uma classe que tem um método de autenticação, essa classe pode ser usada em outras classes que precisam de autenticação.
