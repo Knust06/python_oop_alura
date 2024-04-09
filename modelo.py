@@ -62,5 +62,7 @@ chosen.dar_like()
 filmes_e_series = [vingadores, chosen, tmep, drive, demolidor]
 fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
+print(f'Tamanho da playlist: {len(fim_de_semana)}')
+
 for programa in fim_de_semana:
     print(programa) 
