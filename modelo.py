@@ -72,3 +72,4 @@ for programa in fim_de_semana:
 #MRO - Method Resolution Order - É a ordem que o python vai procurar os métodos que estamos chamando. O python vai procurar primeiro na classe que estamos instanciando, depois na classe mãe e assim por diante.
 #Good Head - Grandmother, Mother, Daughter - É uma forma de lembrar a ordem que o python vai procurar os métodos.
 #Mixin - É uma classe que não é a principal, mas sim uma classe que tem um comportamento específico que pode ser usado em outras classes. Exemplo: Uma classe que tem um método de autenticação, essa classe pode ser usada em outras classes que precisam de autenticação.
+#Duck Typing - É um conceito que diz que se um objeto se comporta como um pato, então ele é um pato. Ou seja, se um objeto tem um método que se comporta como um método de um pato, então ele é um pato.
